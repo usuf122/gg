@@ -1,0 +1,203 @@
+{
+  "project_name": "Dua Cards App",
+  "app_type": "web_app",
+  "design_philosophy": {
+    "theme": "Modern Islamic Classic",
+    "emotional_tone": "Spiritual, Calm, Authentic, Warm",
+    "core_principles": [
+      "Respect the content: Arabic text must be prominent and legible",
+      "Ornamental Minimalism: Use geometric patterns subtly, don't clutter",
+      "Tactile Warmth: Use cream/paper textures instead of sterile white",
+      "Accessibility: High contrast for reading in various lighting conditions"
+    ]
+  },
+  "colors": {
+    "palette": {
+      "background": {
+        "name": "Warm Cream",
+        "hex": "#F9F7F2",
+        "description": "Main app background, paper-like feel"
+      },
+      "card_background": {
+        "name": "Pure White",
+        "hex": "#FFFFFF",
+        "description": "Card surface for maximum readability"
+      },
+      "primary": {
+        "name": "Deep Emerald",
+        "hex": "#044736",
+        "description": "Primary brand color, used for Arabic text and active states"
+      },
+      "secondary": {
+        "name": "Sage Green",
+        "hex": "#86A69D",
+        "description": "Secondary elements, softer accents"
+      },
+      "accent": {
+        "name": "Antique Gold",
+        "hex": "#D4AF37",
+        "description": "Borders, icons, highlights"
+      },
+      "text": {
+        "primary": "#1F2937",
+        "secondary": "#6B7280",
+        "arabic": "#000000"
+      },
+      "border": {
+        "subtle": "#E5E7EB",
+        "decorative": "#D4AF37"
+      }
+    },
+    "gradients": {
+      "gold_shimmer": "linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #D4AF37 100%)"
+    }
+  },
+  "typography": {
+    "font_families": {
+      "arabic": {
+        "name": "Amiri",
+        "url": "https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap",
+        "usage": "All Arabic text",
+        "fallback": "serif"
+      },
+      "headings": {
+        "name": "Playfair Display",
+        "url": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap",
+        "usage": "Russian Titles, Headers",
+        "fallback": "serif"
+      },
+      "body": {
+        "name": "Merriweather",
+        "url": "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap",
+        "usage": "Translations, Transliterations, UI Text",
+        "fallback": "serif"
+      }
+    },
+    "scale": {
+      "arabic_hero": "text-4xl md:text-5xl leading-[2.5rem]",
+      "heading_1": "text-3xl md:text-4xl font-bold tracking-tight",
+      "body_lg": "text-lg leading-relaxed",
+      "body_base": "text-base leading-relaxed"
+    }
+  },
+  "layout": {
+    "grid_system": "Single column centered layout with max-width container",
+    "spacing": {
+      "container_padding": "p-4 md:p-8",
+      "card_padding": "p-6 md:p-10",
+      "section_gap": "gap-8"
+    },
+    "border_radius": {
+      "card": "rounded-2xl",
+      "button": "rounded-full"
+    }
+  },
+  "components": {
+    "DuaCard": {
+      "description": "Main carousel item",
+      "specs": [
+        "Background: White",
+        "Shadow: shadow-xl shadow-emerald-900/5",
+        "Border: 1px solid #E5E7EB with an inner gold border (double border effect)",
+        "Padding: p-8",
+        "Alignment: Center",
+        "Typography: Arabic centered (RTL), Russian centered (LTR)"
+      ]
+    },
+    "Carousel": {
+      "library": "embla-carousel-react",
+      "navigation": "Arrow buttons on sides (desktop) / bottom (mobile)",
+      "dots": "Gold active dot, Gray inactive dots"
+    },
+    "CopyButton": {
+      "style": "Ghost button with icon",
+      "hover": "bg-emerald-50 text-emerald-700",
+      "icon": "Copy (Lucide)",
+      "feedback": "Tooltip or Toast 'Copied!'"
+    }
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "background_pattern",
+        "url": "https://images.unsplash.com/photo-1739994885957-add0b729f051?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwyfHxpc2xhbWljJTIwZ2VvbWV0cmljJTIwcGF0dGVybiUyMGJhY2tncm91bmQlMjBzZWFtbGVzcyUyMGxpZ2h0JTIwZ29sZCUyMGNyZWFtfGVufDB8fHx8MTc3MzIyMTY1OHww&ixlib=rb-4.1.0&q=85",
+        "description": "Subtle geometric pattern for page background. Use with low opacity overlay."
+      },
+      {
+        "category": "accent_gold",
+        "url": "https://images.unsplash.com/photo-1676607185077-f6f289c669e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwzfHxpc2xhbWljJTIwZ2VvbWV0cmljJTIwcGF0dGVybiUyMGJhY2tncm91bmQlMjBzZWFtbGVzcyUyMGxpZ2h0JTIwZ29sZCUyMGNyZWFtfGVufDB8fHx8MTc3MzIyMTY1OHww&ixlib=rb-4.1.0&q=85",
+        "description": "Golden texture for accent elements if needed."
+      }
+    ],
+    "icons": "Use lucide-react (BookOpen, Moon, Sun, Copy, Share2, ChevronLeft, ChevronRight)"
+  },
+  "content_data": [
+    {
+      "id": 1,
+      "title": "Dua for Protection",
+      "arabic": "بِسْمِ اللهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+      "transliteration": "Bismillahil-ladhi la yadurru ma'as-mihi shai'un fil-ardi wa la fis-sama'i, wa Huwas-Sami'ul-'Alim.",
+      "translation": "С именем Аллаха, с именем Которого ничто не причинит вреда ни на земле, ни на небе, ведь Он — Слышащий, Знающий."
+    },
+    {
+      "id": 2,
+      "title": "Dua for Forgiveness",
+      "arabic": "أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ",
+      "transliteration": "Astaghfirullaha wa atubu ilaihi.",
+      "translation": "Я прошу прощения у Аллаха и каюсь перед Ним."
+    },
+    {
+      "id": 3,
+      "title": "Dua for Parents",
+      "arabic": "رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",
+      "transliteration": "Rabbir-hamhuma kama rabbayani saghira.",
+      "translation": "Господи! Помилуй их, ведь они растили меня ребенком."
+    },
+    {
+      "id": 4,
+      "title": "Dua for Knowledge",
+      "arabic": "رَّبِّ زِدْنِي عِلْمًا",
+      "transliteration": "Rabbi zidni 'ilma.",
+      "translation": "Господи! Приумножь мои знания."
+    },
+    {
+      "id": 5,
+      "title": "Dua for Good in Both Worlds",
+      "arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+      "transliteration": "Rabbana atina fid-dunya hasanatan wa fil-akhirati hasanatan waqina 'adhaban-nar.",
+      "translation": "Господь наш! Одари нас добром в этом мире и добром в Последней жизни и защити нас от мучений в Огне."
+    },
+    {
+      "id": 6,
+      "title": "Dua When Leaving Home",
+      "arabic": "بِسْمِ اللهِ ، تَوَكَّلْتُ عَلَى اللهِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ",
+      "transliteration": "Bismillahi, tawakkaltu 'alallahi, wa la hawla wa la quwwata illa billah.",
+      "translation": "С именем Аллаха, я уповаю на Аллаха, и нет мощи и силы ни у кого, кроме Аллаха."
+    },
+    {
+      "id": 7,
+      "title": "Dua for Sorrow",
+      "arabic": "لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ",
+      "transliteration": "La ilaha illa anta subhanaka inni kuntu minaz-zalimin.",
+      "translation": "Нет божества, кроме Тебя! Пречист Ты! Воистину, я был одним из беззаконников."
+    },
+    {
+      "id": 8,
+      "title": "Dua Upon Waking Up",
+      "arabic": "الْحَمْدُ للهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
+      "transliteration": "Alhamdu lillahil-ladhi ahyana ba'da ma amatana wa ilaihin-nushur.",
+      "translation": "Хвала Аллаху, Который оживил нас после того, как умертвил нас, и к Которому предстоит воскрешение."
+    }
+  ],
+  "universal_guidelines": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "Every interaction needs micro-animations - hover states, transitions.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Use sonner for toasts.",
+    "All interactive elements MUST include data-testid attribute.",
+    "For this specific app, prioritize the 'Amiri' font for Arabic. It is critical for the Islamic look.",
+    "Ensure RTL support for the Arabic text blocks (dir='rtl')."
+  ]
+}
