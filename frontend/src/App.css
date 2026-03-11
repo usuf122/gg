@@ -208,6 +208,17 @@ button:focus-visible {
   font-family: 'Merriweather', serif;
 }
 
+/* Hide Emergent badge */
+[data-emergent-badge],
+.emergent-badge,
+iframe[src*="emergent"],
+div[class*="emergent-watermark"],
+div[style*="Made with Emergent"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
 /* Loading Animation for Copy */
 @keyframes pulse-gold {
   0%, 100% {
